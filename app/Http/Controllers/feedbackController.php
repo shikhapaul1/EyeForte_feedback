@@ -38,7 +38,7 @@ class feedbackController extends Controller
 
         echo url("/feedback/{$request->name}/{$request->bill}/{$request->email}/{$request->phone}");
         
-        $bitlyClient = new BitlyClient('e8924a32b36e5a0ac3ee8070f041ea4b9b614952');
+        $bitlyClient = new BitlyClient('biitly token');
 
         $options = [
             'longUrl' => "http://127.0.0.1:8000/feedback/{$request->name}/{$request->bill}/{$request->email}/{$request->phone}",
@@ -59,7 +59,7 @@ class feedbackController extends Controller
 
      public function sendSms($number,$short_url,$name)
     {
-        $apiKey = "08c2a5966808a1c6f3868705d8aa83a";
+        $apiKey = "api key";
         // Message details
         $message ='Hey '.$name.', thank you for shopping with us! To help us best serve you and others, could you click on this '.$short_url.' to answer about your experience. Thanks';
 
